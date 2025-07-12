@@ -50,6 +50,6 @@ Accept: text/event-stream
 Authorization: Bearer <your_api_key_here>
 
 {
-  "question": "Where did I spend money this month?"
+  "question": "your question here",
+  "context_data": "your context data here" // if not provided, the default context data will be used - which is dummy bank account data
 }
-
