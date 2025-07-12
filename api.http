@@ -1,0 +1,55 @@
+### Create user (signup)
+POST https://server-production-5c85.up.railway.app/user/create
+Content-Type: application/json
+
+{
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "user@example.com",
+  "country": "US" // ISO 3166-1 alpha-2 code
+}
+
+### Request login code
+POST https://server-production-5c85.up.railway.app/auth/login_code
+Content-Type: application/json
+
+{
+  "email": "user@example.com"
+}
+
+### Login
+POST https://server-production-5c85.up.railway.app/auth/login
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "login_code": "your login code"
+}
+
+### Logout
+POST https://server-production-5c85.up.railway.app/auth/logout
+Content-Type: application/json
+
+### Generate API key
+POST https://server-production-5c85.up.railway.app/user/api_key/generate
+Content-Type: application/json
+
+### Revoke API key
+POST https://server-production-5c85.up.railway.app/user/api_key/revoke
+Content-Type: application/json
+
+### Get user
+GET https://server-production-5c85.up.railway.app/user/get
+Content-Type: application/json
+Authorization: Bearer <your_api_key_here>
+
+### AI Agent - Start new chat
+POST https://server-production-5c85.up.railway.app/chat
+Content-Type: application/json
+Accept: text/event-stream
+Authorization: Bearer <your_api_key_here>
+
+{
+  "question": "Where did I spend money this month?"
+}
+
