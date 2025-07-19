@@ -1,5 +1,5 @@
 ### Create user (signup)
-POST https://server-production-5c85.up.railway.app/user/create
+POST https://api.recordable.dev/user/create
 Content-Type: application/json
 
 {
@@ -10,7 +10,7 @@ Content-Type: application/json
 }
 
 ### Request login code
-POST https://server-production-5c85.up.railway.app/auth/login_code
+POST https://api.recordable.dev/auth/login_code
 Content-Type: application/json
 
 {
@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 
 ### Login
-POST https://server-production-5c85.up.railway.app/auth/login
+POST https://api.recordable.dev/auth/login
 Content-Type: application/json
 
 {
@@ -27,24 +27,24 @@ Content-Type: application/json
 }
 
 ### Logout
-POST https://server-production-5c85.up.railway.app/auth/logout
+POST https://api.recordable.dev/auth/logout
 Content-Type: application/json
 
 ### Generate API key
-POST https://server-production-5c85.up.railway.app/user/api_key/generate
+POST https://api.recordable.dev/user/api_key/generate
 Content-Type: application/json
 
 ### Revoke API key
-POST https://server-production-5c85.up.railway.app/user/api_key/revoke
+POST https://api.recordable.dev/user/api_key/revoke
 Content-Type: application/json
 
 ### Get user
-GET https://server-production-5c85.up.railway.app/user/get
+GET https://api.recordable.dev/user/get
 Content-Type: application/json
 Authorization: Bearer <your_api_key_here>
 
 ### AI Agent - Start new chat
-POST https://server-production-5c85.up.railway.app/chat
+POST https://api.recordable.dev/chat
 Content-Type: application/json
 Accept: text/event-stream
 Authorization: Bearer <your_api_key_here>
